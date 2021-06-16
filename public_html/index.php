@@ -2,7 +2,7 @@
 include_once('../models/dbFunction.php');
 
 $funObj = new dbFunction();
-if ($_SESSION['login']){
+if (isset($_SESSION['login']) && $_SESSION['login']){
     header("location:home.php");
 }
 if (isset($_POST['login']) && $_POST['login']) {
